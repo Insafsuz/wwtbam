@@ -1,5 +1,20 @@
 import { FC, useEffect, useState } from 'react'
+import styled from 'styled-components'
 
+const StyledTimer = styled.div`
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  left: 140px;
+  bottom: 10px;
+`
 
 interface ITimer {
   setStop: (stop: boolean) => void
@@ -24,7 +39,7 @@ const Timer: FC<ITimer> = ({ setStop, questionNumber }) => {
     setTimer(30)
   }, [questionNumber])
 
-  return <div className='timer'>{timer}</div>
+  return <StyledTimer>{timer}</StyledTimer>
 }
 
 export default Timer

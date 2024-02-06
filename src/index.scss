@@ -88,70 +88,10 @@ h6 {
 .top {
   height: 50%;
   position: relative;
-  .timer {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border: 5px solid #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    font-weight: 700;
-    position: absolute;
-    left: 140px;
-    bottom: 10px;
-  }
 }
 
 .bottom {
   height: 50%;
-}
-
-.trivia {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-
-  .question {
-    width: 80%;
-    background: linear-gradient(#100242, #000);
-    border-radius: 10px;
-    border: 2px solid #fff;
-    text-align: center;
-    padding: 20px;
-    font-size: 20px;
-  }
-  .answers {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    .answer {
-      width: 40%;
-      padding: 10px;
-      text-align: center;
-      background: linear-gradient(#0e0124, #22074d);
-      border: 1px solid #fff;
-      border-radius: 15px;
-      font-size: 20px;
-      font-weight: 300;
-      cursor: pointer;
-      &:hover,
-      &.active {
-        background: mediumblue;
-      }
-      &.correct {
-        animation: correct 3s ease forwards;
-      }
-      &.wrong {
-        animation: wrong 3s ease forwards;
-      }
-    }
-  }
 }
 
 @keyframes correct {
@@ -186,82 +126,4 @@ h6 {
   100% {
     background: crimson;
   }
-}
-
-.pyramid {
-  flex: 0 1 25%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.moneyList {
-  padding: 40px;
-  width: 100%;
-}
-
-.moneyListItem {
-  padding: 6px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  &.active {
-    background-color: teal;
-  }
-}
-
-.moneyListItemNumber {
-  font-size: 20px;
-  width: 30%;
-}
-
-.moneyListItemAmount {
-  font-size: 22px;
-  font-weight: 00;
-}
-
-.endText {
-  font-size: 28px;
-  font-weight: 700;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.start {
-  width: 250px;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.startInput {
-  width: 100%;
-  height: 30px;
-  border: none;
-  border-radius: 5px;
-  padding-left: 10px;
-  font-size: 18px;
-  &:focus {
-    outline: none;
-  }
-}
-
-.startButton {
-  width: 50%;
-  height: 30px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 500;
 }
